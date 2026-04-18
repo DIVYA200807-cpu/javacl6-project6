@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>soring in array</h1>
+   <button onclick="asc()">acesending order</button> 
+   <button onclick="dec">decending order</button>
+   <p id="case1"></p>
+   <p  id="case2"></p>
+   <p id="case3"></p>
+   <h1 id="color"></h1>
+   <h1 id="color2"></h1>
+   <script>
+    var colors =["red","orange", "blue","white","sky", "yellow","black", "pink"];
+    document.getElementById("color").innerHTML = colors.sort();
+    document.getElementById("color2").innerHTML = colors.reverse();
+
+    var number = [10,8,77,60,95,30,4,9,0,100];
+    document.getElementById("case1").innerHTML = number ;
+    document.getElementById("case2").innerHTML = number.sort();
+
+    function asc(){
+        number.sort{function(a,b){
+          return a-b;
+        }}
+        document.getElementById("case1").innerHTML = number;
+    }
+    function dec() {
+            number.sort{
+                function(a, b) {
+                    return a - b;
+                }}
+            document.getElementById("case1").innerHTML = number;
+        }
+
+   </script>
+</body>
+</html>
