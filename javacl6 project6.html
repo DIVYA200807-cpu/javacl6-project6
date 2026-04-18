@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+    
+        /* Banner */
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+        }
+    
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+    
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    
+        button:hover {
+            background-color: #005f73;
+        }
+    
+        p {
+            font-size: 18px;
+            margin: 10px;
+            color: #333;
+        }
+    </style>
+
+</head>
+<body>
+        <!-- Banner -->
+        <div class="banner">
+            Welcome to HTML DOM Learning
+        </div>
+        
+        <div class="container">
+            <h2>Introduction to HTML DOM</h2>
+            <p>
+                The HTML DOM (Document Object Model) allows JavaScript to access and manipulate HTML elements.
+                It represents the document as a tree structure of nodes.
+            </p>
+        
+            <button onclick="showTitle()">Click to Fetch Page Title</button>
+        
+            <!-- Output Paragraphs -->
+            <p id="para1"></p>
+            <p id="para2"></p>
+        </div>
+        
+        <script>
+            function showTitle() {
+                // Accessing the title using DOM
+                let pageTitle = document.title;
+
+                // Display in two paragraphs
+                document.getElementById("para1").innerHTML = "Title (Paragraph 1): " + pageTitle;
+                document.getElementById("para2").innerHTML = "Title (Paragraph 2): " + pageTitle;
+            }
+        </script>
+
+</body>
+</html>
